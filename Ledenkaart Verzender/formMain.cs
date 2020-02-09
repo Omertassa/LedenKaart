@@ -20,43 +20,43 @@ namespace Ledenkaart_Verzender
     public partial class FormMain : Form
     {
         Importer import;
+        FormCredentials formCreds;
 
         int NumberOfSkipped;
         int NumberOfImported;
 
         public FormMain()
         {
-            InitializeComponent();
-
-            LabelUpdater("Importeer een excel bestand");
+            Initialize();
         }
 
-        private void ButtonSend_Click(object sender, EventArgs e)
+        internal void Initialize()
         {
 
-            this.Hide();
-            FormCredentials formCreds = new FormCredentials();
-            formCreds.ShowDialog();
-            this.Show();
+            InitializeComponent();
+
+            import = new Importer();
+            formCreds = new FormCredentials();
+            LabelUpdater("Importeer een excel bestand");
+
         }
 
         private void ButtonImport_Click(object sender, EventArgs e)
         {
-              import = new Importer();
-   
               if (import.SetFileToDataGrid()) { 
                 
-                buttonImport.Enabled = false;
-                buttonSend.Enabled = true;
+                btnImport.Enabled = false;
+                btnSend.Enabled = true;
 
                 var values = import.DataGridToArray();
                 LabelUpdater(values.Item2 + " leden ingelezen. \n" + values.Item1 + " leden zijn hoofdbewoner");
 
                 if (values.Item2 == 0)
                 {
-                    buttonImport.Enabled = true;
-                    buttonSend.Enabled = false;
+                    btnImport.Enabled = true;
+                    btnSend.Enabled = false;
 
+                    LabelUpdater("Importeer een excel bestand");
 
                 }
                 else {
@@ -65,17 +65,17 @@ namespace Ledenkaart_Verzender
                     {
                         splitContainer1.Panel2.Enabled = true;
 
-                        label3.Visible = true;
-                        label8.Visible = true;
-                        label9.Visible = true;
+                        lblEmailAdresSkipped.Visible = true;
+                        lblPhoneNumberSkipped.Visible = true;
+                        lblMobileNumberSkipped.Visible = true;
 
-                        ListLabelUpdater(0, "Skipped");
+                        UpdateLabelSkipped(0);
 
                     }
                     else
                     {
-                        NextSkipped.Enabled = false;
-                        PreviousSkipped.Enabled = false;
+                        btnNextSkipped.Enabled = false;
+                        btnPreviousSkipped.Enabled = false;
 
                     }
 
@@ -83,30 +83,37 @@ namespace Ledenkaart_Verzender
                     {
                         splitContainer1.Panel2.Enabled = true;
 
-                        label13.Visible = true;
+                        lblEmailAdresImported.Visible = true;
                         label20.Visible = true;
-                        label18.Visible = true;
+                        lblMobileImported.Visible = true;
 
-                        ListLabelUpdater(0, "Imported");
+                        UpdateLabelImported(0);
                     }
 
                     else
                     {
-                        NextImported.Enabled = false;
-                        PreviousImported.Enabled = false;
+                        btnNextImported.Enabled = false;
+                        btnPreviousImported.Enabled = false;
                     }
 
 
-                    CounterUpdater();
+                    UpdateCounter();
                 }
 
             }
             
         }
 
+        private void ButtonSend_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            formCreds.ShowDialog();
+            this.Show();
+        }
+
         public void LabelUpdater(string labelText) {
 
-            statusLabel.Text = labelText;
+            lblStatus.Text = labelText;
 
         }
 
@@ -114,43 +121,57 @@ namespace Ledenkaart_Verzender
         
         {
             NumberOfSkipped = import.ShowSkippedMembers(true);
-            ListLabelUpdater(NumberOfSkipped, "Skipped");
+            UpdateLabelSkipped(NumberOfSkipped);
         }
 
         private void PreviousSkipped_Click(object sender, EventArgs e)
         {
             NumberOfSkipped = import.ShowSkippedMembers(false);
-            ListLabelUpdater(NumberOfSkipped, "Skipped");
+            UpdateLabelSkipped(NumberOfSkipped);
          }
 
         private void NextImported_Click(object sender, EventArgs e)
         {
             NumberOfImported = import.ShowImportedMembers(true);
-            ListLabelUpdater(NumberOfImported, "Imported");
+            UpdateLabelImported(NumberOfImported);
         }
 
         private void PreviousImported_Click(object sender, EventArgs e)
         {
             NumberOfImported = import.ShowImportedMembers(false);
-            ListLabelUpdater(NumberOfImported, "Imported");
+            UpdateLabelImported(NumberOfImported);
       
         }
 
-        private void CounterUpdater() {
+        private void UpdateCounter() {
 
-            labelCounterSkipped.Text = ((NumberOfSkipped+1) + "/" + Importer.adresSkippedList.Count);
-            labelCounterImported.Text = ((NumberOfImported+1) + "/" + Importer.adresList.Count);
+            lblCounterSkipped.Text = ((NumberOfSkipped+1) + "/" + Importer.adresSkippedList.Count);
+            lblCounterImported.Text = ((NumberOfImported+1) + "/" + Importer.adresList.Count);
 
         }
 
-        private void ListLabelUpdater(int i ,string initiator) {
+        private void UpdateLabelImported(int i) {
 
-            if (initiator == "Skipped") {
+                lblFullNameImported.Text = (Importer.adresList[i].Initials + " " + Importer.adresList[i].Infix + " " + Importer.adresList[i].SurName);
+                lblAdresImported.Text = Importer.adresList[i].Adres;
+                lblPostodeImported.Text = Importer.adresList[i].Postcode;
+                lblLocationImported.Text = Importer.adresList[i].Location;
+                labelEmail.Text = Importer.adresList[i].EmailAdres;
+                labelPhone.Text = Importer.adresList[i].PhoneNumber;
+                labelMobile.Text = Importer.adresList[i].MobileNumber;
 
-                labelFullNameSkipped.Text = (Importer.adresSkippedList[i].Initials + " " + Importer.adresSkippedList[i].Infix + " " + Importer.adresSkippedList[i].SurName);
-                labelAdresSkipped.Text = Importer.adresSkippedList[i].Adres;
-                labelPostcodeSkipped.Text = Importer.adresSkippedList[i].Postcode;
-                labelLocationSkipped.Text = Importer.adresSkippedList[i].Location;
+                //Gezins leden laden ( er is altijd 1 )
+                dataGridView1.DataSource=Importer.ConvertToDatatable(Importer.memberList, Importer.adresList[i].MainMemberNr);
+                 UpdateCounter();
+
+        }
+
+        private void UpdateLabelSkipped(int i) {
+
+                lblFullNameSkipped.Text = (Importer.adresSkippedList[i].Initials + " " + Importer.adresSkippedList[i].Infix + " " + Importer.adresSkippedList[i].SurName);
+                lblAdresSkipped.Text = Importer.adresSkippedList[i].Adres;
+                lblPostcodeSkipped.Text = Importer.adresSkippedList[i].Postcode;
+                lblLocationSkipped.Text = Importer.adresSkippedList[i].Location;
                 labelEmailSkipped.Text = Importer.adresSkippedList[i].EmailAdres;
                 labelPhoneSkipped.Text = Importer.adresSkippedList[i].PhoneNumber;
                 labelMobileSkipped.Text = Importer.adresSkippedList[i].MobileNumber;
@@ -158,25 +179,10 @@ namespace Ledenkaart_Verzender
                 //Gezins leden laden ( er is altijd 1 )
 
                 dataGridView2.DataSource = (Importer.ConvertToDatatable(Importer.memberSkippedList, Importer.adresSkippedList[i].MainMemberNr));
-
-            }
-
-            else {
-
-                labelFullName.Text = (Importer.adresList[i].Initials + " " + Importer.adresList[i].Infix + " " + Importer.adresList[i].SurName);
-                labelAdres.Text = Importer.adresList[i].Adres;
-                labelPostcode.Text = Importer.adresList[i].Postcode;
-                labelLocation.Text = Importer.adresList[i].Location;
-                labelEmail.Text = Importer.adresList[i].EmailAdres;
-                labelPhone.Text = Importer.adresList[i].PhoneNumber;
-                labelMobile.Text = Importer.adresList[i].MobileNumber;
-
-                //Gezins leden laden ( er is altijd 1 )
-                dataGridView1.DataSource=Importer.ConvertToDatatable(Importer.memberList, Importer.adresList[i].MainMemberNr);
-
-            }
-
-            CounterUpdater();
+                  UpdateCounter();
         }
+
+        }
+    
     }
-}
+

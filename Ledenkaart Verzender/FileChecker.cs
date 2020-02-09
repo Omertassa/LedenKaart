@@ -19,6 +19,8 @@ namespace Ledenkaart_Verzender
 
         public bool FileNotInUse(OpenFileDialog openFileDialog)
         {
+
+            errors = 0;
                {
                    if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
