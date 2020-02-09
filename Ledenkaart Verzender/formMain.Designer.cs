@@ -29,48 +29,48 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.buttonImport = new System.Windows.Forms.Button();
-            this.buttonSend = new System.Windows.Forms.Button();
-            this.statusLabel = new System.Windows.Forms.Label();
+            this.btnImport = new System.Windows.Forms.Button();
+            this.btnSend = new System.Windows.Forms.Button();
+            this.lblStatus = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.labelCounterSkipped = new System.Windows.Forms.Label();
+            this.lblCounterSkipped = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.PreviousSkipped = new System.Windows.Forms.Button();
-            this.NextSkipped = new System.Windows.Forms.Button();
+            this.btnPreviousSkipped = new System.Windows.Forms.Button();
+            this.btnNextSkipped = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.labelEmailSkipped = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblEmailAdresSkipped = new System.Windows.Forms.Label();
             this.labelPhoneSkipped = new System.Windows.Forms.Label();
-            this.labelLocationSkipped = new System.Windows.Forms.Label();
+            this.lblLocationSkipped = new System.Windows.Forms.Label();
             this.labelMobileSkipped = new System.Windows.Forms.Label();
-            this.labelFullNameSkipped = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.labelAdresSkipped = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.labelPostcodeSkipped = new System.Windows.Forms.Label();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.lblFullNameSkipped = new System.Windows.Forms.Label();
+            this.lblMobileNumberSkipped = new System.Windows.Forms.Label();
+            this.lblAdresSkipped = new System.Windows.Forms.Label();
+            this.lblPhoneNumberSkipped = new System.Windows.Forms.Label();
+            this.lblPostcodeSkipped = new System.Windows.Forms.Label();
+            this.lblPhoneNumberImported = new System.Windows.Forms.TabPage();
             this.label5 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.labelCounterImported = new System.Windows.Forms.Label();
+            this.lblCounterImported = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.PreviousImported = new System.Windows.Forms.Button();
-            this.NextImported = new System.Windows.Forms.Button();
+            this.btnPreviousImported = new System.Windows.Forms.Button();
+            this.btnNextImported = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.labelEmail = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
+            this.lblEmailAdresImported = new System.Windows.Forms.Label();
             this.labelPhone = new System.Windows.Forms.Label();
-            this.labelLocation = new System.Windows.Forms.Label();
+            this.lblLocationImported = new System.Windows.Forms.Label();
             this.labelMobile = new System.Windows.Forms.Label();
-            this.labelFullName = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.labelAdres = new System.Windows.Forms.Label();
+            this.lblFullNameImported = new System.Windows.Forms.Label();
+            this.lblMobileImported = new System.Windows.Forms.Label();
+            this.lblAdresImported = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.labelPostcode = new System.Windows.Forms.Label();
+            this.lblPostodeImported = new System.Windows.Forms.Label();
             this.importerBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.importerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -81,74 +81,80 @@
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            this.tabPage2.SuspendLayout();
+            this.lblPhoneNumberImported.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.importerBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.importerBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // buttonImport
+            // btnImport
             // 
-            this.buttonImport.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.buttonImport.Location = new System.Drawing.Point(13, 170);
-            this.buttonImport.Name = "buttonImport";
-            this.buttonImport.Size = new System.Drawing.Size(178, 91);
-            this.buttonImport.TabIndex = 0;
-            this.buttonImport.Text = "Importeren";
-            this.buttonImport.UseVisualStyleBackColor = true;
-            this.buttonImport.Click += new System.EventHandler(this.ButtonImport_Click);
+            this.btnImport.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.btnImport.Location = new System.Drawing.Point(10, 138);
+            this.btnImport.Margin = new System.Windows.Forms.Padding(2);
+            this.btnImport.Name = "btnImport";
+            this.btnImport.Size = new System.Drawing.Size(134, 74);
+            this.btnImport.TabIndex = 0;
+            this.btnImport.Text = "Importeren";
+            this.btnImport.UseVisualStyleBackColor = true;
+            this.btnImport.Click += new System.EventHandler(this.ButtonImport_Click);
             // 
-            // buttonSend
+            // btnSend
             // 
-            this.buttonSend.Enabled = false;
-            this.buttonSend.Location = new System.Drawing.Point(13, 275);
-            this.buttonSend.Name = "buttonSend";
-            this.buttonSend.Size = new System.Drawing.Size(178, 91);
-            this.buttonSend.TabIndex = 2;
-            this.buttonSend.Text = "Verzenden";
-            this.buttonSend.UseVisualStyleBackColor = true;
-            this.buttonSend.Click += new System.EventHandler(this.ButtonSend_Click);
+            this.btnSend.Enabled = false;
+            this.btnSend.Location = new System.Drawing.Point(10, 293);
+            this.btnSend.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSend.Name = "btnSend";
+            this.btnSend.Size = new System.Drawing.Size(134, 74);
+            this.btnSend.TabIndex = 2;
+            this.btnSend.Text = "Verzenden";
+            this.btnSend.UseVisualStyleBackColor = true;
+            this.btnSend.Click += new System.EventHandler(this.ButtonSend_Click);
             // 
-            // statusLabel
+            // lblStatus
             // 
-            this.statusLabel.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.statusLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.statusLabel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.statusLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.statusLabel.ForeColor = System.Drawing.Color.Crimson;
-            this.statusLabel.Location = new System.Drawing.Point(0, 521);
-            this.statusLabel.Name = "statusLabel";
-            this.statusLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.statusLabel.Size = new System.Drawing.Size(1255, 66);
-            this.statusLabel.TabIndex = 3;
-            this.statusLabel.Text = "label1";
-            this.statusLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblStatus.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lblStatus.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblStatus.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStatus.ForeColor = System.Drawing.Color.Crimson;
+            this.lblStatus.Location = new System.Drawing.Point(0, 423);
+            this.lblStatus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblStatus.Size = new System.Drawing.Size(941, 54);
+            this.lblStatus.TabIndex = 3;
+            this.lblStatus.Text = "label1";
+            this.lblStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // splitContainer1
             // 
-            this.splitContainer1.Location = new System.Drawing.Point(12, 12);
+            this.splitContainer1.Location = new System.Drawing.Point(9, 10);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(2);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.Controls.Add(this.pictureBox1);
-            this.splitContainer1.Panel1.Controls.Add(this.buttonImport);
-            this.splitContainer1.Panel1.Controls.Add(this.buttonSend);
+            this.splitContainer1.Panel1.Controls.Add(this.btnImport);
+            this.splitContainer1.Panel1.Controls.Add(this.btnSend);
             // 
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.tabControl1);
             this.splitContainer1.Panel2.Enabled = false;
-            this.splitContainer1.Size = new System.Drawing.Size(1228, 506);
-            this.splitContainer1.SplitterDistance = 204;
+            this.splitContainer1.Size = new System.Drawing.Size(921, 411);
+            this.splitContainer1.SplitterDistance = 153;
+            this.splitContainer1.SplitterWidth = 3;
             this.splitContainer1.TabIndex = 4;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Ledenkaart_Verzender.Properties.Resources.Logo;
-            this.pictureBox1.Location = new System.Drawing.Point(13, 14);
+            this.pictureBox1.Location = new System.Drawing.Point(10, 11);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(178, 118);
+            this.pictureBox1.Size = new System.Drawing.Size(134, 96);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -156,38 +162,40 @@
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.lblPhoneNumberImported);
             this.tabControl1.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
-            this.tabControl1.Location = new System.Drawing.Point(3, 0);
+            this.tabControl1.Location = new System.Drawing.Point(2, 0);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1028, 506);
+            this.tabControl1.Size = new System.Drawing.Size(771, 411);
             this.tabControl1.TabIndex = 16;
             // 
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.SystemColors.Window;
             this.tabPage1.Controls.Add(this.dataGridView2);
-            this.tabPage1.Controls.Add(this.labelCounterSkipped);
+            this.tabPage1.Controls.Add(this.lblCounterSkipped);
             this.tabPage1.Controls.Add(this.label2);
-            this.tabPage1.Controls.Add(this.PreviousSkipped);
-            this.tabPage1.Controls.Add(this.NextSkipped);
+            this.tabPage1.Controls.Add(this.btnPreviousSkipped);
+            this.tabPage1.Controls.Add(this.btnNextSkipped);
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.labelEmailSkipped);
-            this.tabPage1.Controls.Add(this.label3);
+            this.tabPage1.Controls.Add(this.lblEmailAdresSkipped);
             this.tabPage1.Controls.Add(this.labelPhoneSkipped);
-            this.tabPage1.Controls.Add(this.labelLocationSkipped);
+            this.tabPage1.Controls.Add(this.lblLocationSkipped);
             this.tabPage1.Controls.Add(this.labelMobileSkipped);
-            this.tabPage1.Controls.Add(this.labelFullNameSkipped);
-            this.tabPage1.Controls.Add(this.label9);
-            this.tabPage1.Controls.Add(this.labelAdresSkipped);
-            this.tabPage1.Controls.Add(this.label8);
-            this.tabPage1.Controls.Add(this.labelPostcodeSkipped);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Controls.Add(this.lblFullNameSkipped);
+            this.tabPage1.Controls.Add(this.lblMobileNumberSkipped);
+            this.tabPage1.Controls.Add(this.lblAdresSkipped);
+            this.tabPage1.Controls.Add(this.lblPhoneNumberSkipped);
+            this.tabPage1.Controls.Add(this.lblPostcodeSkipped);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1020, 477);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage1.Size = new System.Drawing.Size(763, 385);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Overgeslagen";
             // 
@@ -207,7 +215,8 @@
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataGridView2.GridColor = System.Drawing.SystemColors.Window;
-            this.dataGridView2.Location = new System.Drawing.Point(26, 155);
+            this.dataGridView2.Location = new System.Drawing.Point(20, 126);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView2.MultiSelect = false;
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -218,54 +227,59 @@
             this.dataGridView2.ShowCellToolTips = false;
             this.dataGridView2.ShowEditingIcon = false;
             this.dataGridView2.ShowRowErrors = false;
-            this.dataGridView2.Size = new System.Drawing.Size(978, 268);
+            this.dataGridView2.Size = new System.Drawing.Size(734, 218);
             this.dataGridView2.TabIndex = 35;
             // 
-            // labelCounterSkipped
+            // lblCounterSkipped
             // 
-            this.labelCounterSkipped.AutoSize = true;
-            this.labelCounterSkipped.Location = new System.Drawing.Point(503, 439);
-            this.labelCounterSkipped.Name = "labelCounterSkipped";
-            this.labelCounterSkipped.Size = new System.Drawing.Size(28, 17);
-            this.labelCounterSkipped.TabIndex = 16;
-            this.labelCounterSkipped.Text = "0/0";
+            this.lblCounterSkipped.AutoSize = true;
+            this.lblCounterSkipped.Location = new System.Drawing.Point(377, 357);
+            this.lblCounterSkipped.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCounterSkipped.Name = "lblCounterSkipped";
+            this.lblCounterSkipped.Size = new System.Drawing.Size(24, 15);
+            this.lblCounterSkipped.TabIndex = 16;
+            this.lblCounterSkipped.Text = "0/0";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(22, 14);
+            this.label2.Location = new System.Drawing.Point(16, 11);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(135, 20);
             this.label2.TabIndex = 3;
             this.label2.Text = "Hoofdbewoner:";
             // 
-            // PreviousSkipped
+            // btnPreviousSkipped
             // 
-            this.PreviousSkipped.Location = new System.Drawing.Point(434, 429);
-            this.PreviousSkipped.Name = "PreviousSkipped";
-            this.PreviousSkipped.Size = new System.Drawing.Size(45, 38);
-            this.PreviousSkipped.TabIndex = 1;
-            this.PreviousSkipped.Text = "<<";
-            this.PreviousSkipped.UseVisualStyleBackColor = true;
-            this.PreviousSkipped.Click += new System.EventHandler(this.PreviousSkipped_Click);
+            this.btnPreviousSkipped.Location = new System.Drawing.Point(326, 349);
+            this.btnPreviousSkipped.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPreviousSkipped.Name = "btnPreviousSkipped";
+            this.btnPreviousSkipped.Size = new System.Drawing.Size(34, 31);
+            this.btnPreviousSkipped.TabIndex = 1;
+            this.btnPreviousSkipped.Text = "<<";
+            this.btnPreviousSkipped.UseVisualStyleBackColor = true;
+            this.btnPreviousSkipped.Click += new System.EventHandler(this.PreviousSkipped_Click);
             // 
-            // NextSkipped
+            // btnNextSkipped
             // 
-            this.NextSkipped.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.NextSkipped.Location = new System.Drawing.Point(552, 429);
-            this.NextSkipped.Name = "NextSkipped";
-            this.NextSkipped.Size = new System.Drawing.Size(45, 38);
-            this.NextSkipped.TabIndex = 0;
-            this.NextSkipped.Text = ">>";
-            this.NextSkipped.UseVisualStyleBackColor = true;
-            this.NextSkipped.Click += new System.EventHandler(this.NextSkipped_Click);
+            this.btnNextSkipped.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnNextSkipped.Location = new System.Drawing.Point(414, 349);
+            this.btnNextSkipped.Margin = new System.Windows.Forms.Padding(2);
+            this.btnNextSkipped.Name = "btnNextSkipped";
+            this.btnNextSkipped.Size = new System.Drawing.Size(34, 31);
+            this.btnNextSkipped.TabIndex = 0;
+            this.btnNextSkipped.Text = ">>";
+            this.btnNextSkipped.UseVisualStyleBackColor = true;
+            this.btnNextSkipped.Click += new System.EventHandler(this.NextSkipped_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(23, 124);
+            this.label4.Location = new System.Drawing.Point(17, 101);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(101, 18);
             this.label4.TabIndex = 14;
@@ -274,9 +288,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(26, 107);
+            this.label1.Location = new System.Drawing.Point(20, 87);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(978, 17);
+            this.label1.Size = new System.Drawing.Size(783, 15);
             this.label1.TabIndex = 2;
             this.label1.Text = "---------------------------------------------------------------------------------" +
     "--------------------------------------------------------------------------------" +
@@ -284,122 +299,134 @@
             // 
             // labelEmailSkipped
             // 
-            this.labelEmailSkipped.Location = new System.Drawing.Point(680, 17);
+            this.labelEmailSkipped.Location = new System.Drawing.Point(510, 14);
+            this.labelEmailSkipped.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelEmailSkipped.Name = "labelEmailSkipped";
-            this.labelEmailSkipped.Size = new System.Drawing.Size(54, 17);
+            this.labelEmailSkipped.Size = new System.Drawing.Size(40, 14);
             this.labelEmailSkipped.TabIndex = 13;
             // 
-            // label3
+            // lblEmailAdresSkipped
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(591, 17);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(87, 17);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Email-adres:";
-            this.label3.Visible = false;
+            this.lblEmailAdresSkipped.AutoSize = true;
+            this.lblEmailAdresSkipped.Location = new System.Drawing.Point(443, 14);
+            this.lblEmailAdresSkipped.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblEmailAdresSkipped.Name = "lblEmailAdresSkipped";
+            this.lblEmailAdresSkipped.Size = new System.Drawing.Size(77, 15);
+            this.lblEmailAdresSkipped.TabIndex = 4;
+            this.lblEmailAdresSkipped.Text = "Email-adres:";
+            this.lblEmailAdresSkipped.Visible = false;
             // 
             // labelPhoneSkipped
             // 
             this.labelPhoneSkipped.AutoSize = true;
-            this.labelPhoneSkipped.Location = new System.Drawing.Point(680, 46);
+            this.labelPhoneSkipped.Location = new System.Drawing.Point(510, 37);
+            this.labelPhoneSkipped.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelPhoneSkipped.Name = "labelPhoneSkipped";
-            this.labelPhoneSkipped.Size = new System.Drawing.Size(0, 17);
+            this.labelPhoneSkipped.Size = new System.Drawing.Size(0, 15);
             this.labelPhoneSkipped.TabIndex = 12;
             // 
-            // labelLocationSkipped
+            // lblLocationSkipped
             // 
-            this.labelLocationSkipped.AutoSize = true;
-            this.labelLocationSkipped.Location = new System.Drawing.Point(259, 73);
-            this.labelLocationSkipped.Name = "labelLocationSkipped";
-            this.labelLocationSkipped.Size = new System.Drawing.Size(0, 17);
-            this.labelLocationSkipped.TabIndex = 5;
+            this.lblLocationSkipped.AutoSize = true;
+            this.lblLocationSkipped.Location = new System.Drawing.Point(194, 59);
+            this.lblLocationSkipped.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblLocationSkipped.Name = "lblLocationSkipped";
+            this.lblLocationSkipped.Size = new System.Drawing.Size(0, 15);
+            this.lblLocationSkipped.TabIndex = 5;
             // 
             // labelMobileSkipped
             // 
             this.labelMobileSkipped.AutoSize = true;
-            this.labelMobileSkipped.Location = new System.Drawing.Point(680, 73);
+            this.labelMobileSkipped.Location = new System.Drawing.Point(510, 59);
+            this.labelMobileSkipped.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelMobileSkipped.Name = "labelMobileSkipped";
-            this.labelMobileSkipped.Size = new System.Drawing.Size(0, 17);
+            this.labelMobileSkipped.Size = new System.Drawing.Size(0, 15);
             this.labelMobileSkipped.TabIndex = 11;
             // 
-            // labelFullNameSkipped
+            // lblFullNameSkipped
             // 
-            this.labelFullNameSkipped.AutoSize = true;
-            this.labelFullNameSkipped.Location = new System.Drawing.Point(186, 17);
-            this.labelFullNameSkipped.Name = "labelFullNameSkipped";
-            this.labelFullNameSkipped.Size = new System.Drawing.Size(0, 17);
-            this.labelFullNameSkipped.TabIndex = 6;
+            this.lblFullNameSkipped.AutoSize = true;
+            this.lblFullNameSkipped.Location = new System.Drawing.Point(140, 14);
+            this.lblFullNameSkipped.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblFullNameSkipped.Name = "lblFullNameSkipped";
+            this.lblFullNameSkipped.Size = new System.Drawing.Size(0, 15);
+            this.lblFullNameSkipped.TabIndex = 6;
             // 
-            // label9
+            // lblMobileNumberSkipped
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(591, 73);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(53, 17);
-            this.label9.TabIndex = 10;
-            this.label9.Text = "Mobiel:";
-            this.label9.Visible = false;
+            this.lblMobileNumberSkipped.AutoSize = true;
+            this.lblMobileNumberSkipped.Location = new System.Drawing.Point(443, 59);
+            this.lblMobileNumberSkipped.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblMobileNumberSkipped.Name = "lblMobileNumberSkipped";
+            this.lblMobileNumberSkipped.Size = new System.Drawing.Size(48, 15);
+            this.lblMobileNumberSkipped.TabIndex = 10;
+            this.lblMobileNumberSkipped.Text = "Mobiel:";
+            this.lblMobileNumberSkipped.Visible = false;
             // 
-            // labelAdresSkipped
+            // lblAdresSkipped
             // 
-            this.labelAdresSkipped.AutoSize = true;
-            this.labelAdresSkipped.Location = new System.Drawing.Point(186, 46);
-            this.labelAdresSkipped.Name = "labelAdresSkipped";
-            this.labelAdresSkipped.Size = new System.Drawing.Size(0, 17);
-            this.labelAdresSkipped.TabIndex = 7;
+            this.lblAdresSkipped.AutoSize = true;
+            this.lblAdresSkipped.Location = new System.Drawing.Point(140, 37);
+            this.lblAdresSkipped.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAdresSkipped.Name = "lblAdresSkipped";
+            this.lblAdresSkipped.Size = new System.Drawing.Size(0, 15);
+            this.lblAdresSkipped.TabIndex = 7;
             // 
-            // label8
+            // lblPhoneNumberSkipped
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(591, 46);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(68, 17);
-            this.label8.TabIndex = 9;
-            this.label8.Text = "Telefoon:";
-            this.label8.Visible = false;
+            this.lblPhoneNumberSkipped.AutoSize = true;
+            this.lblPhoneNumberSkipped.Location = new System.Drawing.Point(443, 37);
+            this.lblPhoneNumberSkipped.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPhoneNumberSkipped.Name = "lblPhoneNumberSkipped";
+            this.lblPhoneNumberSkipped.Size = new System.Drawing.Size(58, 15);
+            this.lblPhoneNumberSkipped.TabIndex = 9;
+            this.lblPhoneNumberSkipped.Text = "Telefoon:";
+            this.lblPhoneNumberSkipped.Visible = false;
             // 
-            // labelPostcodeSkipped
+            // lblPostcodeSkipped
             // 
-            this.labelPostcodeSkipped.AutoSize = true;
-            this.labelPostcodeSkipped.Location = new System.Drawing.Point(186, 73);
-            this.labelPostcodeSkipped.Name = "labelPostcodeSkipped";
-            this.labelPostcodeSkipped.Size = new System.Drawing.Size(0, 17);
-            this.labelPostcodeSkipped.TabIndex = 8;
+            this.lblPostcodeSkipped.AutoSize = true;
+            this.lblPostcodeSkipped.Location = new System.Drawing.Point(140, 59);
+            this.lblPostcodeSkipped.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPostcodeSkipped.Name = "lblPostcodeSkipped";
+            this.lblPostcodeSkipped.Size = new System.Drawing.Size(0, 15);
+            this.lblPostcodeSkipped.TabIndex = 8;
             // 
-            // tabPage2
+            // lblPhoneNumberImported
             // 
-            this.tabPage2.Controls.Add(this.label5);
-            this.tabPage2.Controls.Add(this.dataGridView1);
-            this.tabPage2.Controls.Add(this.labelCounterImported);
-            this.tabPage2.Controls.Add(this.label7);
-            this.tabPage2.Controls.Add(this.PreviousImported);
-            this.tabPage2.Controls.Add(this.NextImported);
-            this.tabPage2.Controls.Add(this.label10);
-            this.tabPage2.Controls.Add(this.labelEmail);
-            this.tabPage2.Controls.Add(this.label13);
-            this.tabPage2.Controls.Add(this.labelPhone);
-            this.tabPage2.Controls.Add(this.labelLocation);
-            this.tabPage2.Controls.Add(this.labelMobile);
-            this.tabPage2.Controls.Add(this.labelFullName);
-            this.tabPage2.Controls.Add(this.label18);
-            this.tabPage2.Controls.Add(this.labelAdres);
-            this.tabPage2.Controls.Add(this.label20);
-            this.tabPage2.Controls.Add(this.labelPostcode);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1020, 477);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Geimporteerd";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.lblPhoneNumberImported.Controls.Add(this.label5);
+            this.lblPhoneNumberImported.Controls.Add(this.dataGridView1);
+            this.lblPhoneNumberImported.Controls.Add(this.lblCounterImported);
+            this.lblPhoneNumberImported.Controls.Add(this.label7);
+            this.lblPhoneNumberImported.Controls.Add(this.btnPreviousImported);
+            this.lblPhoneNumberImported.Controls.Add(this.btnNextImported);
+            this.lblPhoneNumberImported.Controls.Add(this.label10);
+            this.lblPhoneNumberImported.Controls.Add(this.labelEmail);
+            this.lblPhoneNumberImported.Controls.Add(this.lblEmailAdresImported);
+            this.lblPhoneNumberImported.Controls.Add(this.labelPhone);
+            this.lblPhoneNumberImported.Controls.Add(this.lblLocationImported);
+            this.lblPhoneNumberImported.Controls.Add(this.labelMobile);
+            this.lblPhoneNumberImported.Controls.Add(this.lblFullNameImported);
+            this.lblPhoneNumberImported.Controls.Add(this.lblMobileImported);
+            this.lblPhoneNumberImported.Controls.Add(this.lblAdresImported);
+            this.lblPhoneNumberImported.Controls.Add(this.label20);
+            this.lblPhoneNumberImported.Controls.Add(this.lblPostodeImported);
+            this.lblPhoneNumberImported.Location = new System.Drawing.Point(4, 22);
+            this.lblPhoneNumberImported.Margin = new System.Windows.Forms.Padding(2);
+            this.lblPhoneNumberImported.Name = "lblPhoneNumberImported";
+            this.lblPhoneNumberImported.Padding = new System.Windows.Forms.Padding(2);
+            this.lblPhoneNumberImported.Size = new System.Drawing.Size(763, 385);
+            this.lblPhoneNumberImported.TabIndex = 1;
+            this.lblPhoneNumberImported.Text = "Geimporteerd";
+            this.lblPhoneNumberImported.UseVisualStyleBackColor = true;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(23, 107);
+            this.label5.Location = new System.Drawing.Point(17, 87);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(978, 17);
+            this.label5.Size = new System.Drawing.Size(783, 15);
             this.label5.TabIndex = 37;
             this.label5.Text = "---------------------------------------------------------------------------------" +
     "--------------------------------------------------------------------------------" +
@@ -421,7 +448,8 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.Window;
-            this.dataGridView1.Location = new System.Drawing.Point(26, 155);
+            this.dataGridView1.Location = new System.Drawing.Point(20, 127);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -432,54 +460,59 @@
             this.dataGridView1.ShowCellToolTips = false;
             this.dataGridView1.ShowEditingIcon = false;
             this.dataGridView1.ShowRowErrors = false;
-            this.dataGridView1.Size = new System.Drawing.Size(978, 268);
+            this.dataGridView1.Size = new System.Drawing.Size(734, 218);
             this.dataGridView1.TabIndex = 36;
             // 
-            // labelCounterImported
+            // lblCounterImported
             // 
-            this.labelCounterImported.AutoSize = true;
-            this.labelCounterImported.Location = new System.Drawing.Point(503, 440);
-            this.labelCounterImported.Name = "labelCounterImported";
-            this.labelCounterImported.Size = new System.Drawing.Size(28, 17);
-            this.labelCounterImported.TabIndex = 32;
-            this.labelCounterImported.Text = "0/0";
+            this.lblCounterImported.AutoSize = true;
+            this.lblCounterImported.Location = new System.Drawing.Point(377, 358);
+            this.lblCounterImported.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCounterImported.Name = "lblCounterImported";
+            this.lblCounterImported.Size = new System.Drawing.Size(24, 15);
+            this.lblCounterImported.TabIndex = 32;
+            this.lblCounterImported.Text = "0/0";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(22, 14);
+            this.label7.Location = new System.Drawing.Point(16, 11);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(135, 20);
             this.label7.TabIndex = 19;
             this.label7.Text = "Hoofdbewoner:";
             // 
-            // PreviousImported
+            // btnPreviousImported
             // 
-            this.PreviousImported.Location = new System.Drawing.Point(434, 429);
-            this.PreviousImported.Name = "PreviousImported";
-            this.PreviousImported.Size = new System.Drawing.Size(45, 38);
-            this.PreviousImported.TabIndex = 17;
-            this.PreviousImported.Text = "<<";
-            this.PreviousImported.UseVisualStyleBackColor = true;
-            this.PreviousImported.Click += new System.EventHandler(this.PreviousImported_Click);
+            this.btnPreviousImported.Location = new System.Drawing.Point(326, 349);
+            this.btnPreviousImported.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPreviousImported.Name = "btnPreviousImported";
+            this.btnPreviousImported.Size = new System.Drawing.Size(34, 31);
+            this.btnPreviousImported.TabIndex = 17;
+            this.btnPreviousImported.Text = "<<";
+            this.btnPreviousImported.UseVisualStyleBackColor = true;
+            this.btnPreviousImported.Click += new System.EventHandler(this.PreviousImported_Click);
             // 
-            // NextImported
+            // btnNextImported
             // 
-            this.NextImported.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.NextImported.Location = new System.Drawing.Point(552, 429);
-            this.NextImported.Name = "NextImported";
-            this.NextImported.Size = new System.Drawing.Size(45, 38);
-            this.NextImported.TabIndex = 16;
-            this.NextImported.Text = ">>";
-            this.NextImported.UseVisualStyleBackColor = true;
-            this.NextImported.Click += new System.EventHandler(this.NextImported_Click);
+            this.btnNextImported.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnNextImported.Location = new System.Drawing.Point(414, 349);
+            this.btnNextImported.Margin = new System.Windows.Forms.Padding(2);
+            this.btnNextImported.Name = "btnNextImported";
+            this.btnNextImported.Size = new System.Drawing.Size(34, 31);
+            this.btnNextImported.TabIndex = 16;
+            this.btnNextImported.Text = ">>";
+            this.btnNextImported.UseVisualStyleBackColor = true;
+            this.btnNextImported.Click += new System.EventHandler(this.NextImported_Click);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(23, 124);
+            this.label10.Location = new System.Drawing.Point(17, 101);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(101, 18);
             this.label10.TabIndex = 30;
@@ -488,88 +521,98 @@
             // labelEmail
             // 
             this.labelEmail.AutoSize = true;
-            this.labelEmail.Location = new System.Drawing.Point(681, 17);
+            this.labelEmail.Location = new System.Drawing.Point(511, 14);
+            this.labelEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelEmail.Name = "labelEmail";
-            this.labelEmail.Size = new System.Drawing.Size(0, 17);
+            this.labelEmail.Size = new System.Drawing.Size(0, 15);
             this.labelEmail.TabIndex = 29;
             // 
-            // label13
+            // lblEmailAdresImported
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(592, 17);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(87, 17);
-            this.label13.TabIndex = 20;
-            this.label13.Text = "Email-adres:";
-            this.label13.Visible = false;
+            this.lblEmailAdresImported.AutoSize = true;
+            this.lblEmailAdresImported.Location = new System.Drawing.Point(444, 14);
+            this.lblEmailAdresImported.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblEmailAdresImported.Name = "lblEmailAdresImported";
+            this.lblEmailAdresImported.Size = new System.Drawing.Size(77, 15);
+            this.lblEmailAdresImported.TabIndex = 20;
+            this.lblEmailAdresImported.Text = "Email-adres:";
+            this.lblEmailAdresImported.Visible = false;
             // 
             // labelPhone
             // 
             this.labelPhone.AutoSize = true;
-            this.labelPhone.Location = new System.Drawing.Point(681, 46);
+            this.labelPhone.Location = new System.Drawing.Point(511, 37);
+            this.labelPhone.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelPhone.Name = "labelPhone";
-            this.labelPhone.Size = new System.Drawing.Size(0, 17);
+            this.labelPhone.Size = new System.Drawing.Size(0, 15);
             this.labelPhone.TabIndex = 28;
             // 
-            // labelLocation
+            // lblLocationImported
             // 
-            this.labelLocation.AutoSize = true;
-            this.labelLocation.Location = new System.Drawing.Point(256, 73);
-            this.labelLocation.Name = "labelLocation";
-            this.labelLocation.Size = new System.Drawing.Size(0, 17);
-            this.labelLocation.TabIndex = 21;
+            this.lblLocationImported.AutoSize = true;
+            this.lblLocationImported.Location = new System.Drawing.Point(192, 59);
+            this.lblLocationImported.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblLocationImported.Name = "lblLocationImported";
+            this.lblLocationImported.Size = new System.Drawing.Size(0, 15);
+            this.lblLocationImported.TabIndex = 21;
             // 
             // labelMobile
             // 
             this.labelMobile.AutoSize = true;
-            this.labelMobile.Location = new System.Drawing.Point(681, 73);
+            this.labelMobile.Location = new System.Drawing.Point(511, 59);
+            this.labelMobile.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelMobile.Name = "labelMobile";
-            this.labelMobile.Size = new System.Drawing.Size(0, 17);
+            this.labelMobile.Size = new System.Drawing.Size(0, 15);
             this.labelMobile.TabIndex = 27;
             // 
-            // labelFullName
+            // lblFullNameImported
             // 
-            this.labelFullName.AutoSize = true;
-            this.labelFullName.Location = new System.Drawing.Point(183, 17);
-            this.labelFullName.Name = "labelFullName";
-            this.labelFullName.Size = new System.Drawing.Size(0, 17);
-            this.labelFullName.TabIndex = 22;
+            this.lblFullNameImported.AutoSize = true;
+            this.lblFullNameImported.Location = new System.Drawing.Point(137, 14);
+            this.lblFullNameImported.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblFullNameImported.Name = "lblFullNameImported";
+            this.lblFullNameImported.Size = new System.Drawing.Size(0, 15);
+            this.lblFullNameImported.TabIndex = 22;
             // 
-            // label18
+            // lblMobileImported
             // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(592, 73);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(53, 17);
-            this.label18.TabIndex = 26;
-            this.label18.Text = "Mobiel:";
-            this.label18.Visible = false;
+            this.lblMobileImported.AutoSize = true;
+            this.lblMobileImported.Location = new System.Drawing.Point(444, 59);
+            this.lblMobileImported.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblMobileImported.Name = "lblMobileImported";
+            this.lblMobileImported.Size = new System.Drawing.Size(48, 15);
+            this.lblMobileImported.TabIndex = 26;
+            this.lblMobileImported.Text = "Mobiel:";
+            this.lblMobileImported.Visible = false;
             // 
-            // labelAdres
+            // lblAdresImported
             // 
-            this.labelAdres.AutoSize = true;
-            this.labelAdres.Location = new System.Drawing.Point(183, 46);
-            this.labelAdres.Name = "labelAdres";
-            this.labelAdres.Size = new System.Drawing.Size(0, 17);
-            this.labelAdres.TabIndex = 23;
+            this.lblAdresImported.AutoSize = true;
+            this.lblAdresImported.Location = new System.Drawing.Point(137, 37);
+            this.lblAdresImported.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAdresImported.Name = "lblAdresImported";
+            this.lblAdresImported.Size = new System.Drawing.Size(0, 15);
+            this.lblAdresImported.TabIndex = 23;
             // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(592, 46);
+            this.label20.Location = new System.Drawing.Point(444, 37);
+            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(68, 17);
+            this.label20.Size = new System.Drawing.Size(58, 15);
             this.label20.TabIndex = 25;
             this.label20.Text = "Telefoon:";
             this.label20.Visible = false;
             // 
-            // labelPostcode
+            // lblPostodeImported
             // 
-            this.labelPostcode.AutoSize = true;
-            this.labelPostcode.Location = new System.Drawing.Point(183, 73);
-            this.labelPostcode.Name = "labelPostcode";
-            this.labelPostcode.Size = new System.Drawing.Size(0, 17);
-            this.labelPostcode.TabIndex = 24;
+            this.lblPostodeImported.AutoSize = true;
+            this.lblPostodeImported.Location = new System.Drawing.Point(137, 59);
+            this.lblPostodeImported.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPostodeImported.Name = "lblPostodeImported";
+            this.lblPostodeImported.Size = new System.Drawing.Size(0, 15);
+            this.lblPostodeImported.TabIndex = 24;
             // 
             // importerBindingSource1
             // 
@@ -581,13 +624,14 @@
             // 
             // FormMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1255, 587);
-            this.Controls.Add(this.statusLabel);
+            this.ClientSize = new System.Drawing.Size(941, 477);
+            this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.splitContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormMain";
@@ -603,8 +647,8 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
+            this.lblPhoneNumberImported.ResumeLayout(false);
+            this.lblPhoneNumberImported.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.importerBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.importerBindingSource)).EndInit();
@@ -614,44 +658,44 @@
 
         #endregion
 
-        private System.Windows.Forms.Button buttonImport;
-        private System.Windows.Forms.Button buttonSend;
-        private System.Windows.Forms.Label statusLabel;
+        private System.Windows.Forms.Button btnImport;
+        private System.Windows.Forms.Button btnSend;
+        private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Label labelPhoneSkipped;
         private System.Windows.Forms.Label labelMobileSkipped;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label labelPostcodeSkipped;
-        private System.Windows.Forms.Label labelAdresSkipped;
-        private System.Windows.Forms.Label labelFullNameSkipped;
-        private System.Windows.Forms.Label labelLocationSkipped;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblMobileNumberSkipped;
+        private System.Windows.Forms.Label lblPhoneNumberSkipped;
+        private System.Windows.Forms.Label lblPostcodeSkipped;
+        private System.Windows.Forms.Label lblAdresSkipped;
+        private System.Windows.Forms.Label lblFullNameSkipped;
+        private System.Windows.Forms.Label lblLocationSkipped;
+        private System.Windows.Forms.Label lblEmailAdresSkipped;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button PreviousSkipped;
-        private System.Windows.Forms.Button NextSkipped;
+        private System.Windows.Forms.Button btnPreviousSkipped;
+        private System.Windows.Forms.Button btnNextSkipped;
         private System.Windows.Forms.Label labelEmailSkipped;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage lblPhoneNumberImported;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button PreviousImported;
-        private System.Windows.Forms.Button NextImported;
+        private System.Windows.Forms.Button btnPreviousImported;
+        private System.Windows.Forms.Button btnNextImported;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label labelEmail;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lblEmailAdresImported;
         private System.Windows.Forms.Label labelPhone;
-        private System.Windows.Forms.Label labelLocation;
+        private System.Windows.Forms.Label lblLocationImported;
         private System.Windows.Forms.Label labelMobile;
-        private System.Windows.Forms.Label labelFullName;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label labelAdres;
+        private System.Windows.Forms.Label lblFullNameImported;
+        private System.Windows.Forms.Label lblMobileImported;
+        private System.Windows.Forms.Label lblAdresImported;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label labelPostcode;
-        private System.Windows.Forms.Label labelCounterSkipped;
-        private System.Windows.Forms.Label labelCounterImported;
+        private System.Windows.Forms.Label lblPostodeImported;
+        private System.Windows.Forms.Label lblCounterSkipped;
+        private System.Windows.Forms.Label lblCounterImported;
         private System.Windows.Forms.BindingSource importerBindingSource;
         private System.Windows.Forms.BindingSource importerBindingSource1;
         private System.Windows.Forms.DataGridView dataGridView2;
