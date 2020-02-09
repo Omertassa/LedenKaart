@@ -60,7 +60,7 @@ namespace Ledenkaart_Verzender
 
                 SmtpServer.Send(mail);
 
-                MessageBox.Show("Testmail is goed verzonden.","Attentie");
+                MessageBox.Show("Testmail is goed verzonden.", "Informatie");
                 return true;
             }
             catch {
